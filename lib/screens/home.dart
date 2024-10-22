@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testweb/Shared/navBar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,18 +12,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Navbar(),
+      ),
       body: Container(
         padding: const EdgeInsets.all(16),
         child: const Column(
           children: [
-            Center(
-                child: SelectableText(
-              "Home page",
+            SelectableText(
+              "Hiiii There! \nWelcome to this web application that i\'m building using flutter just for practice!",
               style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+                fontSize: 18,
               ),
-            )),
+            ),
           ],
         ),
       ),
